@@ -1,0 +1,513 @@
+/* rem -> 1rem->font size of browser or font size of root element 
+/* em-> 1em-> font size of parent root*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:  'Baloo Bhaijaan bold';
+    src:url(../fonts/BalooBhaijaan2-Bold.ttf)
+}
+@font-face {
+    font-family: 'Baloo Bhaijaan medium';
+    src: url(../fonts/BalooBhaijaan2-Medium.ttf);
+}
+@font-face {
+    font-family: 'Baloo Bhaijaan regular';
+    src: url(../fonts/BalooBhaijaan2-Regular.ttf);
+}
+/* utility classes ->things in css which are used frequently (we create them as classes and attatch them in html */
+.flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.container{
+    width: 100%;
+    padding: 0 0;
+    margin: 0 auto;  /*for making contaoner in center*/
+}
+@media(min-width: 1200px) {
+
+    .container{
+        max-width: 1152px;
+    }
+}
+@media(min-width: 576px) {
+
+    .container{
+        max-width: 540px;
+    }
+}
+@media(min-width: 768px) {
+
+        .container{
+            max-width: 720px;
+        }
+    }
+header.topbar {
+    background-color: rgb(98 98 98);
+    color: rgb(232, 230, 227);
+    font-family: "Baloo Bhaijaan bold";
+    margin: 2px;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+header.topbar .login > div a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}    
+header.topbar .container .icons img{
+    width: 24px;
+}
+header.topbar .container .login img{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+header.topbar .container .login{
+    justify-content: space-evenly;
+    flex-basis: 18em;
+}
+header.topbar .login > div{
+    display: flex;
+    align-items: center;
+    padding-right: 0.1rem;
+}
+header.topbar .container .icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-basis: 9rem;
+    margin-top: 0.1rem;
+}
+header.topbar .container .icons a{
+    flex-basis: 33px;
+    padding-top: 6px;
+}
+
+nav .top .container div img{
+    width: 3rem;
+}
+nav .top .container{
+    height: 4rem;
+}
+nav .top .container h1{
+    font-size: 0.8rem;
+    font-family: 'Baloo Bhaijaan medium';
+    height: 0.9rem;
+    letter-spacing: 0.055rem;
+}
+nav .top .container h3{
+    font-size: 0.8rem;
+    font-weight: 100;
+    font-family: 'Baloo Bhaijaan regular';
+    letter-spacing: 0.010rem;
+}
+nav .top .container .contact img{
+    width: 1rem;
+    height: 1rem;
+}
+nav .top .container .contact{
+    display: flex;
+    justify-content: space-between;
+    height: 2rem;
+    flex-basis: 13.55rem;
+    align-items: center;
+}
+nav .top .container .branding img{
+    width: 3rem;
+    background-color: white;
+    border-radius: 10px;
+}
+nav .top .container .time img{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+nav .top .container .time{
+    flex-basis: 11.5rem;
+    align-items: center;
+}
+nav .navbar .container{
+    justify-content: center;
+    height: 2rem;
+}
+nav .navbar .container a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Baloo Bhaijaan regular';
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    transition: all .3s ease;
+    height: 1.3rem;
+}
+nav .navbar .container a.active{
+    background-color: rgb(200, 200, 40);
+    color: black;
+    height: 2rem;
+}
+nav .navbar .container a:hover{
+    background-color: rgb(200, 200, 40);
+    color: black;
+    height: 2rem;
+}
+.magic-shadow{
+    position: relative;
+    /* background: whitesmoke; */
+}
+.magic-shadow::after{
+    content:'';
+    display: block;
+    width: 100%;
+    height: 3rem;
+    background-image: url(../images/shadow.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    top: -9px;
+}
+header.hero{
+    height: 35rem;
+    background-image: url(../images/hero.png);
+    background-position: 0 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+header.hero .container .welcome img{
+    width: 3rem;
+    background: aliceblue;
+    border-radius: 10px;
+}
+header.hero .container .welcome span{
+    margin-right: 0.6rem;
+    font-size: 1.3rem;
+}
+header.hero .container .shopping{
+    color: #fbad40;;
+}
+header.hero .container h1{
+    font-size: 1.5rem;
+    height: 1.5rem;
+}
+header.hero .container p{
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+}
+header.hero .container .welcome{
+    height: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+header.hero .container .button button:hover{
+    background-color: yellow; 
+}
+header.hero .container .button button{
+    display: inline;
+    transition: all .3s ease;
+    cursor: pointer;
+    padding: 0px 4px;
+    /* border-color: bisque; */
+    border-radius: 0.2rem;
+    font-family: 'Baloo Bhaijaan medium';
+    border-style: groove;
+}
+header.hero .container{
+    position: relative;
+    padding-top: 11rem;                     
+}
+header.hero .hero-image img{
+    width: 15rem;
+}
+header.hero .hero-image{
+    position: absolute;
+    left: 27rem;
+    bottom: -2rem;  
+}
+section{
+    padding: 4rem 0;
+}
+section.top-products{
+    background: #b9c1c1;
+}
+.section-heading{
+    font-family: 'BalooBhaijaan2-Bold';
+    text-align: center;
+    position: relative;
+    margin-bottom: 5rem;
+}
+.section-heading::after{
+    content:'';
+    display: block;
+    width: 100%;
+    height: 3rem;
+    background-image: url(../icons/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+section.top-products .food-slider .food-card{
+    background: white;
+    border-radius: 4px;
+   
+}
+section.top-products .food-slider .food-card button img{
+    width: 1rem;
+}
+section.top-products .food-slider .food-card .food-img img{
+    width: 100%;
+    height: 11rem;
+    object-fit: contain;
+    padding: 1rem 0;
+    margin: 0.5rem 0;
+}
+section.top-products h2{
+    text-align: center;
+    font-family: 'Baloo Bhaijaan regular';
+    letter-spacing: 2px;
+    margin-bottom: -9px;
+}
+section.top-products .price{
+    text-align: center;
+}
+section.top-products .food-card button{
+    width: 6.5rem;
+    padding: 3px 5px;
+    margin: 3px;
+    cursor: pointer;
+    border: 2px solid #656565;
+    border-radius: 3px;
+}
+section.top-products .food-card img{
+    margin-right: 2px;
+    /* cursor: pointer; */
+}
+section.top-products .food-card button:hover{
+    background: rgb(241, 241, 93);
+    transition: all .3s ease;
+    color: black;
+    font-weight: bold;
+    border: 2.5px solid black;
+}
+section.top-products .stars{
+    margin: 2px 0;
+}         
+.slick-slide{
+    margin: 0 27px;
+}                 
+.slick-list{
+    margin: 0 -27px;
+}         
+section.top-products .slider-btn{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(238 191 0);
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+}         
+section.top-products .slider-btn:hover{
+    background-color: black;
+}
+section.top-products .slider{
+    position: relative;
+    /* background-color: aliceblue; */
+    padding: 2rem 2rem;
+}                     
+section.top-products .prev-btn{
+    position: absolute;
+    top:9.5rem;
+    z-index: 1;
+    left: -3rem;
+} 
+section.top-products .next-btn{
+    position: absolute;
+    top:9.5rem;
+    z-index: 1;
+    right: -3rem;
+}                    
+section.top-products #view-more{
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+}
+/*.magic-shadow-small{
+    position: relative;
+    background: whitesmoke;
+}
+.magic-shadow-small::after{
+    content:'';
+    display: block;
+    width: 100%;
+    height: 3rem;
+    background-image: url(../images/shadow-sm.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    top: -9px;
+}*/
+
+.flex-1{
+    flex:1;
+}
+section.about-meal .img img{
+    width: 90%;
+}
+section.about-meal button{
+    margin-top: 1rem;
+}
+section.about-meal .para h2{
+    margin-bottom: 2rem;
+}
+section.our-services{
+    background-color: #cbd7d7;
+}
+section.our-services .service-card{
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+    /* position: relative; */
+    border-radius: 4px;
+    margin-right: 2rem;
+}
+section.our-services h2{
+    /* margin-top: 3rem; */
+    font-family: 'BalooBhaijaan2-Bold';
+    margin-bottom: 1rem;
+}
+section.our-services p{
+    font-family: 'BalooBhaijaan2-Regular';
+    margin-bottom: 1rem;
+}
+section.our-services .card-wrapper{
+    margin-right: -2rem;
+}
+.btn{
+    font-family:'BalooBhaijaan2-Medium';
+    transition: all .5s ease;
+    cursor: pointer;
+    padding: 0px 4px;
+    border-radius: 0.2rem;
+    font-family: 'Baloo Bhaijaan medium';
+    border-style: groove;
+    height: 1.7rem;
+}
+.btn:hover{
+    background-color: yellow;
+}
+section.big-deals .timer div{
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #eebf00;
+    border: 2px solid black;
+    border-radius: 12px;
+    border-style: dashed;
+}
+section.big-deals .timer div span{
+    align-items: center;
+}
+section.big-deals .timer{
+    justify-content: space-evenly;
+}
+section.big-deals .timer div span{
+    color: white;
+}
+section.big-deals .timer div span:first-child{
+    font-family: 'BalooBhaijaan2-Bold';
+    font-size: 2rem;
+}
+section.big-deals .timer div span:last-child{
+    font-family: 'BalooBhaijaan2-Medium';
+}
+section.big-deals{
+    background: linear-gradient(
+        rgba(35,43,56,0.9),
+        rgba(35,43,56,0.9)
+    ),url(../images/food-table.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+section.big-deals h1{
+    color: whitesmoke;
+}
+section.blog article#left img{
+    width: 100%;
+}
+section.blog article#right img{
+    width: 100%;
+}
+section.blog article#left{
+    margin-right: 2rem;
+}
+flex-3{
+    flex: 3;
+}
+section.blog .article-card span{
+    font-family: 'BalooBhaijaan2-Regular';
+    font-size: 12.5px;
+}
+section.blog .article-card .strong{
+    margin-right: 0.5rem;
+}
+section.blog .post-meta{
+    padding: 8px;
+    background-color: white;
+}
+section.blog .article-card h2{
+    font-family: 'BalooBhaijaan2-Bold';
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+section.blog .article-card p{
+    font-family: 'BalooBhaijaan2-Regular';
+    font-size: 14px;
+    line-height: 1.5;
+}
+section.blog{
+    background-color: #eafcfc;
+}
+section.blog .btn{
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+
+
+}
+.flex-column{
+    flex-direction: column;
+}
+section.contact-us iframe{
+    
+}
+section.contact-us #wrapper #contact h1.section-heading{
+    font-size: 1.5em;
+}
+section.contact-us #wrapper #contact h1.section-heading::after{
+    height: 2rem;
+    margin-left: -0.5rem;
+}
+section.contact-us #call-us{
+    width: 14rem;
+}
+section.contact-us .map{
+    /* width: fit-content; */
+}
+section.contact-us{
+    padding-top: 0;
+}
